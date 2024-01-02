@@ -31,6 +31,24 @@ function validateCardNumber(cardNumber) {
         return "Visa";
     } else if (/^5[1-5]/.test(cardNumber)) {
         return "MasterCard";
+    } else if (/^3[47]/.test(cardNumber)) {
+        return "American Express (AMEX)";
+    } else if (/^6(?:011|5)/.test(cardNumber)) {
+        return "Discover";
+    } else if (/^(?:2131|1800|35\d{3})/.test(cardNumber)) {
+        return "JCB";
+    } else if (/^3(?:0[0-5]|[68])/.test(cardNumber)) {
+        return "Diners Club - North America";
+    } else if (/^30[0-5]/.test(cardNumber)) {
+        return "Diners Club - Carte Blanche";
+    } else if (/^36/.test(cardNumber)) {
+        return "Diners Club - International";
+    } else if (/^(?:5[0678]\d\d|6304|6390|67\d\d)/.test(cardNumber)) {
+        return "Maestro";
+    } else if (/^(?:4026|417500|4508|4844|491(3|7))/.test(cardNumber)) {
+        return "Visa Electron";
+    } else if (/^63[7-9]/.test(cardNumber)) {
+        return "InstaPayment";
     } else {
         return "Другая";
     }

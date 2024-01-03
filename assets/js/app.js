@@ -29,7 +29,7 @@ function validateCardNumber(cardNumber) {
     // Тип платежной системы
     if (/^4/.test(cardNumber)) {
         return "Visa";
-    } else if (/^5[1-5]/.test(cardNumber)) {
+    } else if (/^5[1-5]/.test(cardNumber) || /^2[2-7]/.test(cardNumber)) {
         return "MasterCard";
     } else if (/^3[47]/.test(cardNumber)) {
         return "American Express (AMEX)";
